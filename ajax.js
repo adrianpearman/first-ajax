@@ -101,4 +101,14 @@ $(document).ready(function () {
       $('section#step8').append(responseData)
     });
   });
+  $('button#step9').on('click', function(){
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/a_car',
+      method: 'GET',
+      // data: ,
+      dataType: 'html',
+    }).done(function(responseData){
+      $('#list').append(responseData)
+    })
+  });
 });
